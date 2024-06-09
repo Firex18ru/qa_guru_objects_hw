@@ -1,5 +1,5 @@
 from selene import browser, have
-import os
+from pathlib import Path
 
 
 def test_demoqa_form():
@@ -28,7 +28,7 @@ def test_demoqa_form():
     browser.element("[for = hobbies-checkbox-1]").click()
     browser.element("[for = hobbies-checkbox-2]").click()
 
-    browser.element("#uploadPicture").send_keys(os.path.abspath("./picture/094745.png"))
+    browser.element("#uploadPicture").type(str(Path(__file__).parent.parent.joinpath(f"resources/094745.png")))
 
     browser.element("#currentAddress").type("Izhevsk")
 
