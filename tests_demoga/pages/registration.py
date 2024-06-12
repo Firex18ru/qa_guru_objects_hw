@@ -27,13 +27,14 @@ class RegistrationPage:
         browser.element("#dateOfBirthInput").click()
         browser.element(".react-datepicker__month-select").type(month)
         browser.element(".react-datepicker__year-select").type(year)
-        browser.element(f"react-datepickeer__day--0{day}:not(.react-datepicker__day--outside-month)").click()
+        browser.element(f".react-datepicker__day--0{day}:not(.react-datepicker__day--outside-month)").click()
 
     def choice_subject(self, value):
         browser.element("#subjectsInput").type(value).press_enter()
 
-    def choice_hobbies(self, hobbies):
-        browser.all('.custom-checkbox').element_by(have.exact_text(hobbies)).click()
+    def choice_hobbies(self):
+        browser.element("[for = hobbies-checkbox-1]").click()
+        browser.element("[for = hobbies-checkbox-2]").click()
 
     def upload_picture(self, file):
         browser.element("#uploadPicture").type(str(Path(__file__).parent.parent.joinpath(f"resources/", file)))
