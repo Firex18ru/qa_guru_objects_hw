@@ -1,6 +1,6 @@
 from pathlib import Path
 from selene import browser, have
-import tests_demoga
+
 
 
 class RegistrationPage:
