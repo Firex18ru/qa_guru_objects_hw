@@ -7,6 +7,7 @@ class RegistrationPage:
     def __init__(self):
         self.state = browser.element('#state')
         self.city = browser.element('#city')
+
     def open(self):
         browser.open("/automation-practice-form")
 
