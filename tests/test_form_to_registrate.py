@@ -32,7 +32,3 @@ def test_form_to_registrate():
             "NCR Delhi")
 
     )
-
-
-
-    browser.element("#closeLargeModal").click()
