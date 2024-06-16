@@ -1,5 +1,5 @@
 from data.user import User
-from pages.registration import RegistrationPage
+from test_demoga.pages.registration_pages import RegistrationPage
 
 
 def test_form_to_registrate():

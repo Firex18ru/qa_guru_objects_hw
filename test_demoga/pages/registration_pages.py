@@ -10,7 +10,7 @@ class RegistrationPage:
 
     def open(self):
         browser.open("/automation-practice-form")
-
+        return self
     def _fill_first_name(self, value):
         browser.element("#firstName").type(value)
         return self
@@ -23,7 +23,7 @@ class RegistrationPage:
         browser.element("#userEmail").type(value)
         return self
 
-    def _choice_gender(self):
+    def _choice_gender(self, gender):
         browser.element('[for="gender-radio-1"]').click()
         return self
 
@@ -42,7 +42,7 @@ class RegistrationPage:
         browser.element("#subjectsInput").type(value).press_enter()
         return self
 
-    def _choice_hobbies(self):
+    def _choice_hobbies(self, hobbies):
         browser.element("[for = hobbies-checkbox-1]").click()
         browser.element("[for = hobbies-checkbox-2]").click()
         return self
@@ -55,11 +55,11 @@ class RegistrationPage:
         browser.element("#currentAddress").type(value)
         return self
 
-    def _choice_state(self):
+    def _choice_state(self, state):
         browser.element("#state").click().element("#react-select-3-option-0").click()
         return self
 
-    def _choice_city(self):
+    def _choice_city(self, city):
         browser.element("#city").click().element("#react-select-4-option-0").click()
         return self
 
