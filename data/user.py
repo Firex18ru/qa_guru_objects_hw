@@ -1,19 +1,19 @@
-from dataclasses import dataclass
+import dataclasses
 
 
-@dataclass
+@dataclasses.dataclass
 class User:
     name: str
     surname: str
     email: str
     gender: str
     phone: str
+    date_year: str
     date_month: str
     date_day: str
-    date_year: str
     subject: str
     hobby: str
-    file: str
+    photo: str
     address: str
     state: str
     city: str
