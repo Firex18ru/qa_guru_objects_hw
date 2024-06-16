@@ -86,7 +86,7 @@ class RegistrationPage:
         return self
 
     def should_registered_user(self, student: User):
-        browser.element('.table').all('td').even.should(
+        browser.element(".table").all("td").even.should(
             have.exact_texts(
                 f'{student.name} {student.surname}',
                 student.email,
