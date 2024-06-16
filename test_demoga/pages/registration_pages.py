@@ -23,7 +23,7 @@ class RegistrationPage:
         browser.element("#userEmail").type(value)
         return self
 
-    def _choice_gender(self, gender):
+    def _choice_gender(self):
         browser.element('[for="gender-radio-1"]').click()
         return self
 
