@@ -2,7 +2,6 @@ from pathlib import Path
 from selene import browser, have
 
 
-
 class RegistrationPage:
 
     def open(self):

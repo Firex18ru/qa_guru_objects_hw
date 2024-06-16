@@ -1,5 +1,4 @@
-from selene import browser
-from tests_demoga.pages.registration import RegistrationPage
+from tests_demoga.pages.registration_page import RegistrationPage
 
 
 def test_form_to_registrate():
@@ -19,15 +18,13 @@ def test_form_to_registrate():
     page.choice_city()
     page.submit()
     page.should_user(
-            "Ivan Yakimenko",
-            "Def11@def.ru",
-            "Male",
-            "0999777601",
-            "11 February,1989",
-            "Computer Science",
-            "Sports, Reading",
-            "094745.png",
-            "Izhevsk",
-            "NCR Delhi")
-
-
+        "Ivan Yakimenko",
+        "Def11@def.ru",
+        "Male",
+        "0999777601",
+        "11 February,1989",
+        "Computer Science",
+        "Sports, Reading",
+        "094745.png",
+        "Izhevsk",
+        "NCR Delhi")
